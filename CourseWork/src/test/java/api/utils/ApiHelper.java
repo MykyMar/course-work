@@ -16,7 +16,7 @@ public class ApiHelper {
 
     public static Response sendPostRequest(Object body, Matcher<?> expectedResult){
         return    given()
-                .log().body()
+                .log().all()
                 .body(body)
                 .when()
                 .post("/jsonrpc.php")
