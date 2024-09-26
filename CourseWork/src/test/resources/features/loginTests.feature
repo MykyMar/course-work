@@ -18,5 +18,5 @@ Feature: Login page tests
     Examples:
       | userName     | password      |
       | problem_user | admin         |
-      | admin        | incorrect_psw |
+      | admin2       | incorrect_psw |
 
