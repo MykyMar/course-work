@@ -26,7 +26,7 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests {
     @BeforeTest
     @Parameters("browser")
     public void setup(String browser) {
-        WebDriverFactory.setUpBrowser(browser);  // Настройка браузера
+        WebDriverFactory.setUpBrowser(browser);
         Configuration.baseUrl = "http://localhost/";
     }
 

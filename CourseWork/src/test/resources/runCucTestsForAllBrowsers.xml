@@ -3,20 +3,20 @@
     <test name="Firefox Tests">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="cucumberExamples.RunCucumberTest" />
+            <class name="cucumberExamples.RunCucumberTest"/>
         </classes>
     </test>
     <test name="Chrome Tests">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="cucumberExamples.RunCucumberTest" />
+            <class name="cucumberExamples.RunCucumberTest"/>
         </classes>
     </test>
 
     <test name="Chrome Headless Tests">
-        <parameter name="browser" value="chrome-headless" />
+        <parameter name="browser" value="chrome-headless"/>
         <classes>
-            <class name="cucumberExamples.RunCucumberTest" />
+            <class name="cucumberExamples.RunCucumberTest"/>
         </classes>
     </test>
 </suite>

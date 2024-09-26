@@ -1,8 +1,8 @@
-package API;
+package api;
 
-import API.data.ApiHelper;
-import API.data.CreateRequest;
-import API.data.CreateUserParams;
+import api.utils.ApiHelper;
+import api.utils.CreateRequest;
+import api.utils.CreateUserParams;
 import lombok.Getter;
 import org.testng.annotations.BeforeMethod;
 import io.restassured.response.Response;
@@ -13,17 +13,15 @@ import java.util.Map;
 
 import static org.hamcrest.Matchers.*;
 
-
 public class UserApiProceduresTests {
 
     @Getter
     private static int userId;
+    @Getter
+    private static final String username = "NewUser";
 
-    private final String username = "NewUser";
-    private final String usernameAuth = "jsonrpc";
-    private final String apiToken = "819a91af641e4f0e8098cba4899199f4b2fe1ae0ceed17377727ae3f7e0e";
 
-    @BeforeMethod(groups = "preconditions")
+    @BeforeMethod(groups = {"preconditions","postconditions"})
     public void setup() {
         ApiHelper.setup();
     }

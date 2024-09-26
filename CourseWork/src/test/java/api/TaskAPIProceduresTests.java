@@ -1,6 +1,6 @@
-package API;
+package api;
 
-import API.data.*;
+import api.utils.*;
 import io.restassured.response.Response;
 import lombok.Getter;
 import org.testng.annotations.BeforeMethod;
@@ -27,6 +27,7 @@ public class TaskAPIProceduresTests {
     public void createTask() {
         int projectId = ProjectApiProceduresTests.getProjectId();
         int userId = UserApiProceduresTests.getUserId();
+
         CreateRequest<CreateTaskParams> body = CreateRequest.<CreateTaskParams>builder()
                 .jsonrpc("2.0")
                 .method("createTask")

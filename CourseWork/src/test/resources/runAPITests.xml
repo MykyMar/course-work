@@ -3,10 +3,9 @@
 
     <test name="Dependent Tests">
         <classes>
-            <class name="API.UserApiProceduresTests"/>
-            <class name="API.ProjectApiProceduresTests"/>
-            <class name="API.TaskAPIProceduresTests"/>
-
+            <class name="api.UserApiProceduresTests"/>
+            <class name="api.ProjectApiProceduresTests"/>
+            <class name="api.TaskAPIProceduresTests"/>
         </classes>
     </test>
 

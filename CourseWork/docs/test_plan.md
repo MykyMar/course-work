@@ -2,18 +2,18 @@
 
 ## 1. Introduction
 This document describes the testing strategy and scenarios for the Kanban application.
-Based on the study of the functionality of the UI and API documentation, a set of tests and the infrastructure for running them will be developed to test the application.
+Based on the study of the functionality of the ui and api documentation, a set of tests and the infrastructure for running them will be developed to test the application.
 
 
 ## 2. Objectives
 - To ensure the core functionality of the Kanban application through automated testing.
-- To cover both UI and API functionality using comprehensive test scenarios.
+- To cover both ui and api functionality using comprehensive test scenarios.
 - To integrate testing into the CI/CD pipeline for regular test execution.
 
 ## 3. Scope
 ### 3.1. In-Scope
-- **UI Testing**: Testing core functionalities of the user interface, including user login, project management, and task management across different browsers (Chrome, Chrome headless, Firefox).
-- **API Testing**: Verifying CRUD operations for users, projects, and tasks through REST API.
+- **ui Testing**: Testing core functionalities of the user interface, including user login, project management, and task management across different browsers (Chrome, Chrome headless, Firefox).
+- **api Testing**: Verifying CRUD operations for users, projects, and tasks through REST api.
 - **CI/CD**: Daily execution of tests through Jenkins.
 
 ### 3.2. Out-of-Scope
@@ -21,8 +21,8 @@ Based on the study of the functionality of the UI and API documentation, a set o
 
 ## 4. Testing Strategy
 ### 4.1. Types of Testing
-- **UI Testing**: Using Selenide to automate UI tests.
-- **API Testing**: Using Rest Assured for automated API testing.
+- **ui Testing**: Using Selenide to automate ui tests.
+- **api Testing**: Using Rest Assured for automated api testing.
 - **Automation Framework**: The project will be executed as a Maven project with integration of TestNG for test execution, Allure for test reporting, and Cucumber for BDD.
 
 ### 4.2. Test Environments
@@ -31,23 +31,23 @@ Based on the study of the functionality of the UI and API documentation, a set o
 
 ### 4.3. Tools and Frameworks
 - **TestNG** for test execution.
-- **Selenide** for UI tests.
-- **Rest Assured** for API tests.
+- **Selenide** for ui tests.
+- **Rest Assured** for api tests.
 - **Allure** for reporting.
 - **Cucumber** for behavior-driven development (BDD). Only for 4 tests.
 - **Git** for version control and code storage.
 
 ## 5. Test Execution Plan
 ### 5.1. Test Cycles
-- UI and API tests will be executed daily through Jenkins.
+- ui and api tests will be executed daily through Jenkins.
 - Separate test cycles for different functionalities, with the ability to selectively run specific test groups via a configuration file.
 
 ### 5.2. Test Data
-- Test data for users, projects, and tasks will be created and cleaned up via API.
+- Test data for users, projects, and tasks will be created and cleaned up via api.
 
 ## 6. Test Scenarios
 
-### 6.1. UI Test Scenarios
+### 6.1. ui Test Scenarios
 
 1. **Login Testing**:
    - Positive case: Login with valid credentials.
@@ -56,7 +56,6 @@ Based on the study of the functionality of the UI and API documentation, a set o
    
 2. **Project Management**:
    - Positive case: Create a project with valid data.
-   - Positive case: Close a project and verify it is no longer active.
    - Negative case: Try to create a project with existing Identifier.
 
 3. **Task Management**:
@@ -64,28 +63,24 @@ Based on the study of the functionality of the UI and API documentation, a set o
     - Positive case: Move a task between different phases (e.g., from "To Do" to "In Progress").
     - Positive case: Create a subtask under an existing task.
     - Positive case: Add a comment to a task and verify the comment appears correctly.
-    - Positive case: Move a task between projects.
     - Positive case: Close an existing task and verify it is no longer active.
 
 
-### 6.2. API Test Scenarios
+### 6.2. api Test Scenarios
 
 1. **User Management**:
    - Positive case: Create a new user.
    - Positive case: Delete a user.
-   - Negative case: Create a user with an existing email.
+   - Negative case: Create a user with an existing username.
    
 2. **Project Management**:
    - Positive case: Create a new project.
    - Positive case: Add a user to a project.
-   - Positive case: Delete an existing project.
    - Negative case: Create a project without a name.
-   - Negative case: Add a user to a non-existent project.
 
 3. **Task Management**:
    - Positive case: Create a new task.
    - Positive case: Delete a task.
-   - Negative case: Delete a non-existent task.
 
 
 ## 7. Entry and Exit Criteria
@@ -101,5 +96,5 @@ Based on the study of the functionality of the UI and API documentation, a set o
 - Test results will be stored in Jenkins and Git.
 
 ## 9. Success Criteria
-- All critical UI and API functionalities pass automated testing.
+- All critical ui and api functionalities pass automated testing.
 - Tests successfully run on a daily schedule without interruptions.

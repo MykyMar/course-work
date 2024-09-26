@@ -1,6 +1,6 @@
-package API;
+package api;
 
-import API.data.*;
+import api.utils.*;
 import lombok.Getter;
 import org.testng.annotations.BeforeMethod;
 import io.restassured.response.Response;
@@ -17,7 +17,7 @@ public class ProjectApiProceduresTests {
     @Getter
     private static int projectId;
 
-    @BeforeMethod(groups = "preconditions")
+    @BeforeMethod(groups = {"preconditions","postconditions"})
     public void setup() {
         ApiHelper.setup();
     }

@@ -34,7 +34,6 @@ public class CreateProjectStepDefinitions {
 
     @Given("User login and on Dashboard page")
     public void login(List <String> userData) {
-        open("/login");
         loginPage.login(userData.getFirst(), userData.getFirst());
         assertTrue(dashboardPage.getNewProjectBtn().isDisplayed(), "The 'New project' is not displayed!");
     }

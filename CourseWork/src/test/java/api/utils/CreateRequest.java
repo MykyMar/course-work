@@ -1,4 +1,4 @@
-package API.data;
+package api.utils;
 import lombok.*;
 
 @Getter

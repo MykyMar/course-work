@@ -15,18 +15,18 @@
 ## Scenarios
 
 ### Preconditions: 
-**Type**: API
+**Type**: api
 - Create a user
 - Create a project
 - Add a user to a project
 
 ### Postconditions:
-**Type**: API
+**Type**: api
 - Delete the project.
 - Delete the user.
 
 
-## API tests (Positive)
+## api tests (Positive)
 1. Create a user 
 2. Create a project 
 3. Add a user to a project
@@ -35,13 +35,11 @@
 6. Delete the project
 7. Delete the user
 
-## API tests (Negative)
-1. Create a user with an existing email.
+## api tests (Negative)
+1. Create a user with an existing username.
 2. Create a project without a name.
-3. Add a user to a non-existent project.
-4. Delete a non-existent task.
 
-## UI tests
+## ui tests
 1. Login Positive/Negative // without Preconditions and Postconditions
    - Positive: Login with valid credentials.
    - Negative: Login with incorrect password.
@@ -52,9 +50,8 @@
 3. Create a task
 4. Move a task between different phases(e.g., from "To Do" to "In Progress")
 5. Create a subtask 
-6. Add a comment to a task
-7. Move task between projects
-8. Close a task
-9. Close a project 
+6. Add a comment to a task 
+7. Close a task 
+ 
 
 

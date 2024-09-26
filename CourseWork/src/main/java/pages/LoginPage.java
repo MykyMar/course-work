@@ -18,6 +18,7 @@ public class LoginPage {
 
 
     public DashboardPage login(String userName, String password) {
+        open("/login");
         userNameField.setValue(userName);
         passwordField.setValue(password);
         submitBtn.click();

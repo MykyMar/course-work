@@ -1,22 +1,19 @@
 package cucumberExamples.stepDefinitions;
 
 
-import com.codeborne.selenide.Configuration;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.annotations.Parameters;
 import pages.DashboardPage;
 import pages.LoginPage;
-import utils.WebDriverFactory;
+
 
 import java.time.Duration;
 import java.util.List;
 
-import static com.codeborne.selenide.Configuration.browser;
+
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import static org.testng.AssertJUnit.assertTrue;

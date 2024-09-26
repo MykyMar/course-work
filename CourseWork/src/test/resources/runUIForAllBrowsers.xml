@@ -1,0 +1,27 @@
+<suite name="Cross Browser Suite" thread-count="3">
+    <test name="Firefox Tests">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ui.TaskActionsTests"/>
+            <class name="api.UserApiProceduresTests"/>
+            <class name="api.ProjectApiProceduresTests"/>
+        </classes>
+    </test>
+    <test name="Chrome Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ui.TaskActionsTests"/>
+            <class name="api.UserApiProceduresTests"/>
+            <class name="api.ProjectApiProceduresTests"/>
+        </classes>
+    </test>
+
+    <test name="Chrome Headless Tests">
+        <parameter name="browser" value="chrome-headless"/>
+        <classes>
+            <class name="ui.TaskActionsTests"/>
+            <class name="api.UserApiProceduresTests"/>
+            <class name="api.ProjectApiProceduresTests"/>
+        </classes>
+    </test>
+</suite>
