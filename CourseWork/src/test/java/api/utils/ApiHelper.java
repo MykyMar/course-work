@@ -28,7 +28,7 @@ public class ApiHelper {
                 .extract().response();
     }
     public static void setup() {
-        RestAssured.baseURI = "http://127.0.0.1:80";
+        RestAssured.baseURI = " http://172.18.0.3:80";
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setAuth(RestAssured.basic(usernameAuth, apiToken))
                 .addHeader("Content-Type", "application/json")
